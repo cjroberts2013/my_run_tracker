@@ -1,0 +1,19 @@
+{
+  "name": "my_run_tracker",
+  "version": "1.0.0",
+  "description": "My Run Tracker website",
+  "main": "script.js",
+  "scripts": {
+    "devserver": "live-server --browser=firefox"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cjroberts2013/my_run_tracker.git"
+  },
+  "author": "Charles Roberts",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cjroberts2013/my_run_tracker/issues"
+  },
+  "homepage": "https://github.com/cjroberts2013/my_run_tracker#readme"
+}
