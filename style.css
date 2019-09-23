@@ -70,6 +70,73 @@ nav h3 a {
     / 60% 1fr;
 }
 
+@media screen and (max-width: 850px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .headerImg {
+    height: 80vh;
+    width: auto;
+  }
+
+  .headerText {
+    font-size: 17rem;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .headerImg {
+    height: 70vh;
+    width: auto;
+  }
+  .headerText {
+    font-size: 13rem;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .headerImg {
+    height: 50vh;
+    width: auto;
+  }
+
+  .headerText {
+    font-size: 10rem;
+  }
+
+  .runLog {
+    padding: 0;
+    margin: 0;
+  }
+
+  #runLog-header {
+    width: 100%;
+  }
+
+  .runLog-card {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  nav h3 a {
+    font-size: 1.2rem;
+  }
+
+  .navItems a {
+    font-size: 1rem;
+  }
+  .headerImg {
+    height: 40vh;
+    width: auto;
+  }
+  .headerText {
+    font-size: 7rem;
+  }
+}
+
 .runLog {
   grid-area: runLog;
   display: flex;
@@ -92,17 +159,70 @@ nav h3 a {
   box-shadow: 0 3px 6px #999;
   display: grid;
   grid-template:
-    10%
-    10%
-    10%
-    10%
-    10%
-    10%
-    10%
-    10%
-    10%
-    10%
-    / 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    minmax(10px, 10%)
+    minmax(10px, 10%)
+    minmax(20px, 10%)
+    minmax(10px, 10%)
+    minmax(10px, 10%)
+    minmax(10px, 10%)
+    minmax(10px, 10%)
+    minmax(10px, 10%)
+    minmax(10px, 10%)
+    minmax(10px, 10%)
+    / minmax(10px, 10%) minmax(80px, 10%) minmax(10px, 10%) minmax(80px, 10%) minmax(
+      10px,
+      10%
+    )
+    minmax(80px, 10%) minmax(10px, 10%) minmax(50px, 10%) minmax(50px, 10%) minmax(10px, 10%);
+}
+
+.type-run {
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-align: left;
+  grid-area: 3 / 2 / 4 / 5;
+}
+
+.date-run {
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: left;
+  grid-area: 4 / 2 / 5 / 3;
+}
+
+.card-dist {
+  grid-area: 7 / 2 / 8 / 3;
+}
+
+.card-pace {
+  grid-area: 7 / 4 / 8 / 5;
+}
+
+.card-time {
+  grid-area: 7 / 6 / 8 / 7;
+}
+
+.log-dist {
+  grid-area: 8 / 2 / 9 / 3;
+}
+
+.log-pace {
+  grid-area: 8 / 4 / 9 / 5;
+}
+
+.log-time {
+  grid-area: 8 / 6 / 9 / 7;
+}
+
+.card-notes {
+  font-size: 1.3rem;
+  font-weight: bold;
+  grid-area: 3 / 8 / 4 / 10;
+}
+
+.runLog-comments {
+  text-align: left;
+  grid-area: 4 / 8 / 8 / 10;
 }
 
 #runLog-btn {
@@ -121,7 +241,4 @@ nav h3 a {
 .paceCalc {
   grid-area: pace;
   background-color: green;
-}
-
-.btn:hover {
 }
