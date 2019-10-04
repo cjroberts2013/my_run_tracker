@@ -23,30 +23,223 @@
         </div>
       </div>
 
+      <!--                                          NEXT SECTION                                             -->
+
       <div class="main">
         <div class="runLog" id="run-log">
           <h2 id="runLog-header">RUNNING LOG</h2>
-          <div class="runLog-card">
-            <div class="type-run">Evening Run</div>
-            <div class="date-run">08/27/19</div>
-            <div class="card-dist">Distance</div>
-            <div class="card-pace">Pace</div>
-            <div class="card-time">Time</div>
-            <div class="log-dist">8.02 mi</div>
-            <div class="log-pace">10:30 /mi</div>
-            <div class="log-time">1h 23m 21s</div>
-            <div class="card-notes">Notes</div>
-            <div class="runLog-comments">
-              I had a really good run. It started off a little rough but one i
-              settled in, it was a piece of cake.
+
+          <!--
+            <div class="runLog-card">
+            <div class="runLog-left">
+              <div class="run-info">
+                <div class="type-run">Evening Run</div>
+                <div class="date-run">08/27/19</div>
+                <br />
+              </div>
+
+              <div class="dist-info">
+                <div class="card-dist">
+                  Distance: <span class="log-dist">8.02 mi</span>
+                </div>
+              </div>
+
+              <div class="pace-info">
+                <div class="card-pace">
+                  Pace: <span class="log-pace">10:31 /mi</span>
+                </div>
+              </div>
+
+              <div class="time-info">
+                <div class="card-time">
+                  Time: <span class="log-time">1h 23m 21s</span>
+                </div>
+              </div>
+            </div>
+            <div class="runLog-right">
+              <div class="card-notes">Notes</div>
+              <div class="runLog-comments">
+                I had a really good run. It started off a little rough but one i
+                settled in, it was a piece of cake. I had a really good run. It
+                started off a little rough but one i settled in, it was a piece
+                of cake.
+              </div>
             </div>
           </div>
-          <button class="btn" id="runLog-btn">ADD NEW RUN</button>
+
+                                                    Second Card                                             
+
+          <div class="runLog-card">
+              <div class="runLog-left">
+                <div class="run-info">
+                  <div class="type-run">Evening Run</div>
+                  <div class="date-run">08/27/19</div>
+                  <br />
+                </div>
+  
+                <div class="dist-info">
+                  <div class="card-dist">
+                    Distance: <span class="log-dist">8.02 mi</span>
+                  </div>
+                </div>
+  
+                <div class="pace-info">
+                  <div class="card-pace">
+                    Pace: <span class="log-pace">10:31 /mi</span>
+                  </div>
+                </div>
+  
+                <div class="time-info">
+                  <div class="card-time">
+                    Time: <span class="log-time">1h 23m 21s</span>
+                  </div>
+                </div>
+              </div>
+              <div class="runLog-right">
+                <div class="card-notes">Notes</div>
+                <div class="runLog-comments">
+                  I had a really good run. It started off a little rough but one i
+                  settled in, it was a piece of cake. I had a really good run. It
+                  started off a little rough but one i settled in, it was a piece
+                  of cake.
+                </div>
+              </div>
+            </div>
+          -->
+          
+
+          <a href="#popup" class="btn popup__init" id="runLog-btn">ADD NEW RUN</a>
         </div>
-        <div class="distConvert" id="dist-convert"></div>
-        <div class="paceCalc" id="pace-calc"></div>
+
+        <!--                                          DISTANCE CONVERTER                                             -->
+
+        <div class="distConvert" id="dist-convert">
+          <div class="divConverter-contain">
+            <h1 class="dist-header">Distance Converter</h1>
+            <div class="from-inputs">
+              <h1 class="convert-from">Convert From</h1>
+              <br />
+              <input type="number" placeholder="Distance"  class="input"/><br /><br />
+              <select name="from" id="from-select" class="from-input-select input">
+                <option value="mile" selected>mile</option>
+                <option value="km">km</option>
+              </select>
+            </div>
+            <div class="to-inputs">
+              <h1 class="convert-to">Convert To</h1>
+              <br />
+              <select name="to" id="to-select" class="to-input-select input">
+                <option value="km" selected>km</option>
+                <option value="mile">mile</option>
+              </select>
+            </div>
+            <div class="calculate-dist">
+              <button class="calc-btn btn">CALCULATE</button>
+              <h1 class="eq-dist">Equivalent Distance</h1>
+              <input type="text" class="calculated-dist" />
+            </div>
+          </div>
+        </div>
       </div>
+      <!--                                          PACE CALCULATOR                                            -->
+
+      <div class="paceCalc" id="pace-calc">
+        <div class="paceCalc-contain">
+          <h1 class="paceCalc-header">PACE CALCULATOR</h1>
+          <div class="input-div">
+            <input
+              type="number"
+              class="num-input-min input"
+              placeholder="minutes"
+              
+            /><input
+              type="number"
+              class="num-input-sec input"
+              placeholder="seconds"/>
+          </div>
+          <button class="set-pace-btn btn ">SET PACE</button>
+          <table class="pace-table">
+            <thead>
+                <tr>
+                    <th colspan="2">Distance</th>
+                    <th class="t1">Time</th>
+                    <th class="t2">Time</th>
+                    <th class="t3">Time</th>
+                  </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="2">1 Mile</td>
+                    <td class="1m-t1" >Time</td>
+                    <td class="1m-t2">Time</td>
+                    <td class="1m-t3">Time</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">3K</td>
+                    <td class="3k-t1">Time</td>
+                    <td class="3k-t2">Time</td>
+                    <td class="3k-t3">Time</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">5K</td>
+                    <td "5k-t1">Time</td>
+                    <td "5k-t2">Time</td>
+                    <td class="5k-t3">Time</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">5 Mile</td>
+                    <td class="5m-t1">Time</td>
+                    <td class="5m-t2">Time</td>
+                    <td class="5m-t3">Time</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">10K</td>
+                    <td class="10k-t1">Time</td>
+                    <td class="10k-t2">Time</td>
+                    <td class="10k-t3">Time</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">1/2 Marathon</td>
+                    <td class="1/2M-t1">Time</td>
+                    <td class="1/2M-t2">Time</td>
+                    <td class="1/2M-t3">Time</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">Marathon</td>
+                    <td class="M-t1">Time</td>
+                    <td class="M-t2">Time</td>
+                    <td class="M-t3">Time</td>
+                  </tr>
+            </tbody>
+            
+          </table>
+        </div>
+      </div>
+
+      <!--                                          PACE CALCULATOR END                                           -->
+    
+
+      <div class="popup" id="popupId">
+        <div class="popup__content">
+          <label for="run__type" id="type__label">Type of Run</label>
+          <input type="text" name='run__type' id="type__input">
+          <label for="run__date" id="date__label">Date of Run</label>
+          <input type="date" name="run__date" id="date__input">
+          <label for="distance" id="distance__label">Distance</label>
+          <input type="text" id="distance__input" name='distance'>
+          <label for="pace" id="pace__label">Pace</label>
+          <input type="text" id="pace__input" name="pace">
+          <label for="time" id="time__label">Time</label>
+          <input type="time" id="time__input" name="time">
+          <label for="notes" id="notes__label">Notes</label>
+          <textarea name="notes" id="notes__input" name="notes" cols="30" rows="7" class="pop_input"></textarea>
+          <button class="form__btn btn">SUBMIT</button>
+          <button class="form__btn2 btn">CANCEL</button>
+        </div>
+      </div>
+    
     </div>
+    
     <script src="script.js"></script>
   </body>
 </html>

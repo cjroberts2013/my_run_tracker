@@ -28,7 +28,7 @@ nav {
 nav h3 a {
   text-decoration: none;
   color: white;
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 .navItems {
@@ -39,7 +39,7 @@ nav h3 a {
 .navItems a {
   text-decoration: none;
   color: white;
-  font-size: 1.4rem;
+  font-size: 2rem;
   font-weight: bold;
   margin-left: 1.5rem;
 }
@@ -63,12 +63,294 @@ nav h3 a {
 }
 
 .main {
+  width: 100%;
+  display: flex;
+}
+
+.runLog {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 100%;
+  align-items: center;
+  text-align: center;
+  margin: 1rem auto;
+}
+
+span {
+  font-weight: 400;
+}
+
+#runLog-header {
+  width: 95%;
+  padding: 12px 0;
+  color: white;
+  background-color: #4bb4ef;
+  font-size: 2.3rem;
+}
+
+.runLog-card {
+  font-size: 2rem;
+  width: 95%;
+  margin: 1rem auto;
+  background-color: #fff;
+  box-shadow: 0 3px 6px #999;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-around;
+  line-height: 2.6rem;
+  flex-wrap: wrap;
+}
+
+.runLog-left {
+  display: flex;
+  flex-direction: column;
+  margin-right: 2rem;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+
+.runLog-right {
+  flex-basis: 50%;
+}
+
+.type-run {
+  font-weight: bold;
+  text-align: left;
+}
+
+.date-run {
+  font-weight: bold;
+  text-align: left;
+}
+
+.card-dist {
+  font-weight: bold;
+}
+
+.card-pace {
+  font-weight: bold;
+}
+
+.card-time {
+  font-weight: bold;
+}
+
+.card-notes {
+  font-weight: bold;
+}
+
+.runLog-comments {
+  text-align: left;
+}
+
+#runLog-btn {
+  font-size: 2.3rem;
+  padding: 12px 0;
+  width: 95%;
+  color: white;
+  background-color: #0122d2;
+  border: none;
+  text-decoration: none;
+}
+
+.distConvert {
+  flex: 1 0 40%;
+}
+
+.divConverter-contain {
+  background: linear-gradient(to bottom right, #4eff1a, #4eb4ef);
+  width: 95%;
+  margin: 1rem auto;
+  text-align: center;
   display: grid;
   grid-template:
-    "runLog dist" 80vh
-    "pace pace" 80vh
-    / 60% 1fr;
+    "header header" 52px
+    "from to" 1fr
+    "calc calc" 60%
+    / 1fr 1fr;
+  grid-gap: 1.5rem;
 }
+
+.input {
+  padding: 8px 0;
+}
+
+.from-inputs {
+  grid-area: from;
+  margin-left: 1rem;
+}
+
+.to-inputs {
+  grid-area: to;
+  margin-right: 1rem;
+}
+
+.calculate-dist {
+  grid-area: calc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.calc-btn {
+  font-size: 2.3rem;
+  padding: 12px 0;
+  width: 80%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  margin-bottom: 2rem;
+}
+
+.eq-dist {
+  color: white;
+  padding: 12px 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 50%;
+  margin-bottom: 2rem;
+}
+
+.calculated-dist {
+  margin-bottom: 2rem;
+  padding: 8px 0;
+}
+
+.dist-header {
+  grid-area: header;
+  padding: 12px 0;
+  width: 100%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 2.3rem;
+  text-transform: uppercase;
+}
+
+.paceCalc {
+  background: linear-gradient(to bottom right, #4bb4ef, #0122d2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.paceCalc-contain {
+  width: 100%;
+  text-align: center;
+}
+
+.paceCalc-header {
+  width: 100%;
+  padding: 12px 0;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 2.3rem;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.input-div {
+  margin-bottom: 2rem;
+}
+
+.set-pace-btn {
+  font-size: 2.3rem;
+  padding: 12px 0;
+  width: 60%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+}
+
+.pace-table {
+  margin: 2rem auto;
+  text-align: start;
+  font-size: 2rem;
+  border-collapse: collapse;
+  min-width: 550px;
+  color: white;
+}
+
+.pace-table thead tr {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: left;
+  font-weight: bold;
+}
+
+.pace-table th,
+.pace-table td {
+  padding: 12px 15px;
+}
+
+.pace-table tbody tr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.pace-table tbody tr:nth-of-type(even) {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: black;
+}
+
+.pace-table tbody tr:last-of-type {
+  border-bottom: 3px solid rgba(0, 0, 0, 0.5);
+}
+
+.popup {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  height: 100vh;
+  width: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup__content {
+  font-size: 2rem;
+  background-color: white;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.popup__content label {
+  padding-bottom: 1rem;
+}
+
+.popup__content input {
+  font-size: 1.6rem;
+  padding: 1.5rem;
+}
+
+.popup__content textarea {
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  padding: 1.5rem;
+}
+
+.form__btn {
+  font-size: 2.3rem;
+  padding: 12px 0;
+  width: 100%;
+  color: white;
+  background-color: #4bb4ef;
+  border: none;
+  margin-bottom: 1rem;
+}
+
+.form__btn2 {
+  font-size: 2.3rem;
+  padding: 12px 0;
+  width: 100%;
+  color: white;
+  background-color: red;
+  border: none;
+}
+
+/*       ------------------------              MEDIA QUERIES            -----------------------------                                      */
 
 @media screen and (max-width: 850px) {
   .main {
@@ -84,21 +366,45 @@ nav h3 a {
   .headerText {
     font-size: 17rem;
   }
+
+  .paceCalc {
+    width: 95%;
+    margin: 1rem auto;
+  }
+
+  .set-pace-btn {
+    width: 80%;
+  }
+  .runLog {
+    width: 100%;
+  }
 }
 
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 720px) {
   .headerImg {
-    height: 70vh;
+    height: 80vh;
     width: auto;
   }
   .headerText {
     font-size: 13rem;
   }
+
+  nav h3 a {
+    font-size: 2rem;
+  }
+
+  .navItems a {
+    font-size: 1.4rem;
+  }
+
+  .pace-table {
+    min-width: 450px;
+  }
 }
 
 @media screen and (max-width: 580px) {
   .headerImg {
-    height: 50vh;
+    height: 80vh;
     width: auto;
   }
 
@@ -106,17 +412,23 @@ nav h3 a {
     font-size: 10rem;
   }
 
-  .runLog {
-    padding: 0;
-    margin: 0;
-  }
-
-  #runLog-header {
-    width: 100%;
-  }
-
   .runLog-card {
-    width: 100%;
+    flex-direction: column;
+  }
+
+  .runLog-right {
+    padding: 2rem;
+  }
+
+  .pace-table {
+    min-width: 350px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .pace-table {
+    min-width: 80%;
+    font-size: 1.6rem;
   }
 }
 
@@ -129,116 +441,10 @@ nav h3 a {
     font-size: 1rem;
   }
   .headerImg {
-    height: 40vh;
+    height: 80vh;
     width: auto;
   }
   .headerText {
     font-size: 7rem;
   }
-}
-
-.runLog {
-  grid-area: runLog;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 2rem;
-}
-
-#runLog-header {
-  width: 90%;
-  color: white;
-  background-color: #4bb4ef;
-}
-
-.runLog-card {
-  width: 90%;
-  margin: 1rem auto;
-  background-color: #fff;
-  box-shadow: 0 3px 6px #999;
-  display: grid;
-  grid-template:
-    minmax(10px, 10%)
-    minmax(10px, 10%)
-    minmax(20px, 10%)
-    minmax(10px, 10%)
-    minmax(10px, 10%)
-    minmax(10px, 10%)
-    minmax(10px, 10%)
-    minmax(10px, 10%)
-    minmax(10px, 10%)
-    minmax(10px, 10%)
-    / minmax(10px, 10%) minmax(80px, 10%) minmax(10px, 10%) minmax(80px, 10%) minmax(
-      10px,
-      10%
-    )
-    minmax(80px, 10%) minmax(10px, 10%) minmax(50px, 10%) minmax(50px, 10%) minmax(10px, 10%);
-}
-
-.type-run {
-  font-size: 1.6rem;
-  font-weight: bold;
-  text-align: left;
-  grid-area: 3 / 2 / 4 / 5;
-}
-
-.date-run {
-  font-size: 1.3rem;
-  font-weight: bold;
-  text-align: left;
-  grid-area: 4 / 2 / 5 / 3;
-}
-
-.card-dist {
-  grid-area: 7 / 2 / 8 / 3;
-}
-
-.card-pace {
-  grid-area: 7 / 4 / 8 / 5;
-}
-
-.card-time {
-  grid-area: 7 / 6 / 8 / 7;
-}
-
-.log-dist {
-  grid-area: 8 / 2 / 9 / 3;
-}
-
-.log-pace {
-  grid-area: 8 / 4 / 9 / 5;
-}
-
-.log-time {
-  grid-area: 8 / 6 / 9 / 7;
-}
-
-.card-notes {
-  font-size: 1.3rem;
-  font-weight: bold;
-  grid-area: 3 / 8 / 4 / 10;
-}
-
-.runLog-comments {
-  text-align: left;
-  grid-area: 4 / 8 / 8 / 10;
-}
-
-#runLog-btn {
-  width: 90%;
-  color: white;
-  background-color: #0122d2;
-  border: none;
-  height: 1.8rem;
-}
-
-.distConvert {
-  grid-area: dist;
-  background-color: blue;
-}
-
-.paceCalc {
-  grid-area: pace;
-  background-color: green;
 }
