@@ -74,7 +74,8 @@ nav h3 a {
 .headerText {
   color: rgba(105, 255, 165, 0.82);
   font-size: 20rem;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-family: Lato, sans-serif;
+  font-weight: bold;
 }
 
 .main {
@@ -431,6 +432,16 @@ span {
 
 /*       ------------------------              MEDIA QUERIES            -----------------------------                                      */
 
+@media screen and (max-width: 1100px) {
+  .headerText {
+    font-size: 17rem;
+  }
+  .headerImg {
+    height: 80vh;
+    width: auto;
+  }
+}
+
 @media screen and (max-width: 850px) {
   .main {
     display: -webkit-box;
@@ -448,7 +459,7 @@ span {
   }
 
   .headerText {
-    font-size: 17rem;
+    font-size: 13rem;
   }
 
   .paceCalc {
@@ -470,7 +481,7 @@ span {
     width: auto;
   }
   .headerText {
-    font-size: 13rem;
+    font-size: 10rem;
   }
 
   nav h3 a {
@@ -493,7 +504,7 @@ span {
   }
 
   .headerText {
-    font-size: 10rem;
+    font-size: 8rem;
   }
 
   .runLog-card {
@@ -513,6 +524,10 @@ span {
 }
 
 @media screen and (max-width: 450px) {
+  .headerText {
+    font-size: 7rem;
+  }
+
   .pace-table {
     min-width: 80%;
     font-size: 1.6rem;
@@ -520,6 +535,10 @@ span {
 }
 
 @media screen and (max-width: 390px) {
+  .headerText {
+    font-size: 4rem;
+  }
+
   nav h3 a {
     font-size: 1.2rem;
   }
